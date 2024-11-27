@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My project title</title>
+    <title>Eternal Sunshine</title>
     <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="CDN library url"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script defer src="main.js"></script>
+
+    <style>
+        body,
+        html {
+            margin: 1;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #scene {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .layer {
+            position: absolute;
+            width: 1%;
+            height: 100%;
+        }
+
+        .layer img {
+            width: 2000px;
+            height: 1000px;
+            opacity: 0.2;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>use ur imagination</h1>
+    <div id="scene">
+        <div class="layer" data-depth="1.1">
+            <img src="dot.png" alt="Layer 1" />
+        </div>
+        <div class="layer" data-depth="1.2">
+            <img src="dot.png" alt="Layer 2" />
+        </div>
+        <div class="layer" data-depth="1.3">
+            <img src="dot.png" alt="Layer 3" />
+        </div>
+        <div class="layer" data-depth="1.4">
+            <img src="dot.png" alt="Layer 4" />
+        </div>
+        <div class="layer" data-depth="1.5">
+            <img src="dot.png" alt="Layer 5" />
+        </div>
+        <div class="layer" data-depth="1.6">
+            <img src="dot.png" alt="Layer 6" />
+        </div>
+        <div class="layer" data-depth="1.7">
+            <img src="dot.png" alt="Layer 3" />
+        </div>
+        <div class="layer" data-depth="1.8">
+            <img src="dot.png" alt="Layer 4" />
+        </div>
+        <div class="layer" data-depth="1.9">
+            <img src="dot.png" alt="Layer 5" />
+        </div>
+        <div class="layer" data-depth="2.0">
+            <img src="dot.png" alt="Layer 6" />
+        </div>
+    </div>
+    <script>
+        // Initialize parallax
+        var scene = document.getElementById("scene");
+        var parallaxInstance = new Parallax(scene);
+    </script>
 </body>
+
 </html>

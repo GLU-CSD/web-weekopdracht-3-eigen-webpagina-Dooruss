@@ -1,1 +1,1 @@
-alert("Use ur imagination");
+alert("test");
