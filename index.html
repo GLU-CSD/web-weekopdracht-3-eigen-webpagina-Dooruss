@@ -32,10 +32,19 @@
             height: 100%;
         }
 
+        .layerTwo {
+            #image {
+                position: absolute;
+                left: 50px;
+                top: 10px;
+            }
+
+        }
+
         .layer img {
             width: 2000px;
             height: 1000px;
-            opacity: 0.2;
+            opacity: 1.0;
         }
     </style>
 </head>
@@ -43,16 +52,20 @@
 <body>
     <div id="scene">
         <div class="layer" data-depth="0.1">
+            <img src="stage lights.png" alt="Layer 2" />
             <img src="crowd.png" alt="Layer 1" />
+        </div>
+        <div class="layer" data-depth="0.2">
+            <img src="stage lights.png" alt="Layer 2" />
+        </div>
+        <div class="layerTwo" data-depth="0.2">
+            <img src="ariana.png" alt="Layer 2" />
         </div>
         <div class="layer" data-depth="0.4">
             <img src="crowd.png" alt="Layer 2" />
         </div>
         <div class="layer" data-depth="0.7">
             <img src="crowd.png" alt="Layer 3" />
-        </div>
-        <div class="layer" data-depth="1.0">
-            <img src="crowd.png" alt="Layer 4" />
         </div>
         <div class="layer" data-depth="1.3">
             <img src="crowd.png" alt="Layer 5" />
