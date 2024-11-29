@@ -1,1 +1,1 @@
-alert("test");
+alert("Welcome to the Eternal position tour!");
